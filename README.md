@@ -24,3 +24,4 @@ git checkout Lesson-8
 
 The example Unity project in this repository contains the final code that was modified in Lesson 08 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to include the ability to log out the user from an authenticated brainCloud session.
 
+Unity editor version: LTS 2021.3.4f1
