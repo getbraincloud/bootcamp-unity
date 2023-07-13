@@ -23,3 +23,5 @@ git checkout Lesson-18
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 18 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to get the list of global entities using the Level indexed-id. The game's spawner then uses the global entity data to properly spawn asteroids and enemies with the desired ranged-values for the example game's horde mode.
+
+Unity editor version: LTS 2021.3.4f1
