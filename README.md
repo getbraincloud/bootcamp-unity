@@ -24,3 +24,4 @@ git checkout Lesson-6
 
 The example Unity project in this repository contains the final code that was modified in Lesson 06 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is setup to authenticate with the brainCloud servers using an anonymous identity.
 
+Unity editor version: LTS 2021.3.4f1
