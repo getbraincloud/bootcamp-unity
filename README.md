@@ -23,3 +23,5 @@ git checkout Lesson-27
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 27 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to check if there has been any user progress and if there has, to update the user entity data accordingly.
+
+Unity editor version: LTS 2021.3.4f1
