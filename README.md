@@ -23,3 +23,5 @@ git checkout Lesson-24
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 24 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to check for progress toward earning an achievement and awarding the achievement and updating brainCloud if that progress is completed.
+
+Unity editor version: LTS 2021.3.4f1
