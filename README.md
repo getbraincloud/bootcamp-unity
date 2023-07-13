@@ -23,3 +23,5 @@ git checkout Lesson-32
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 32 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to run a script on the brainCloud servers to submit a score to multiple leaderboards instead of just submitting a score to a single leaderboard.
+
+Unity editor version: LTS 2021.3.4f1
