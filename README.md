@@ -24,3 +24,4 @@ git checkout Lesson-4
 
 The example Unity project in this repository contains the final code that was modified in Lesson 04 of the brainCloud BootCamp learning series. In this lesson, the brainCloud wrapper was instantiated and the runCallbacks method was setup to be invoked during an Update call.
 
+Unity editor version: LTS 2021.3.4f1
