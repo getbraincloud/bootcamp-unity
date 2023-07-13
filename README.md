@@ -23,3 +23,5 @@ git checkout Lesson-15
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 15 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to allow high scores to be posted to the leaderboard.
+
+Unity editor version: LTS 2021.3.4f1
