@@ -24,3 +24,4 @@ git checkout Initial-Project
 
 The example project in this repository intentionally does not contain the brainCloud client in the Unity project. This project is intended to be the starting code for lesson 03 in the brainCloud BootCamp learning series.
 
+Unity editor version: LTS 2021.3.4f1
