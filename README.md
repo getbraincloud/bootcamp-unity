@@ -24,3 +24,4 @@ git checkout Lesson-3
 
 The example Unity project in this repository contains the final code that was modified in Lesson 03 of the brainCloud BootCamp learning series. In this lesson, the brainCloud client was added the example Unity project.
 
+Unity editor version: LTS 2021.3.4f1
