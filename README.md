@@ -23,3 +23,5 @@ git checkout Lesson-26
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 26 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to check if the user has already created the user entity data and if the user hasn't, then the app will dynamically create the user entity data and send it to the brainCloud server.
+
+Unity editor version: LTS 2021.3.4f1
