@@ -23,3 +23,5 @@ git checkout Lesson-21
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 21 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to add logic to increment the user statistics and then update the brainCloud servers with the increment values.
+
+Unity editor version: LTS 2021.3.4f1
