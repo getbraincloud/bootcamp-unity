@@ -23,3 +23,5 @@ git checkout Lesson-11
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 11 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to allow the player to update their username on brainCloud.
+
+Unity editor version: LTS 2021.3.4f1
