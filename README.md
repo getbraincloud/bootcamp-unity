@@ -23,3 +23,5 @@ git checkout Lesson-29
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 29 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to handle a failed authentication request and display an appropriate error message to the user.
+
+Unity editor version: LTS 2021.3.4f1
