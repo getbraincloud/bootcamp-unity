@@ -23,3 +23,5 @@ git checkout Lesson-33
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 33 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to request and display the aggregate leaderboard stored on the brainCloud server using custom entities.
+
+Unity editor version: LTS 2021.3.4f1
