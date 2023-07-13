@@ -23,3 +23,5 @@ git checkout Lesson-35
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 35 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to handle the updated authentication data caused by the changes implemented in Part 1 of this double lesson.
+
+Unity editor version: LTS 2021.3.4f1
