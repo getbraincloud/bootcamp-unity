@@ -23,3 +23,5 @@ git checkout Lesson-20
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 20 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to request and display a list of user statistics. The user statistics were setup on the brainCloud portal in the previous lesson.
+
+Unity editor version: LTS 2021.3.4f1
