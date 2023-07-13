@@ -24,3 +24,4 @@ git checkout Lesson-7
 
 The example Unity project in this repository contains the final code that was modified in Lesson 07 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to reconnect a previously authenticated user with the brainCloud servers.
 
+Unity editor version: LTS 2021.3.4f1
