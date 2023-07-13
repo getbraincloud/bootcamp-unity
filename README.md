@@ -23,3 +23,5 @@ git checkout Lesson-14
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 14 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to request and display a leaderboard. The leaderboard was setup on the brainCloud portal in lesson 13.
+
+Unity editor version: LTS 2021.3.4f1
