@@ -23,3 +23,5 @@ git checkout Lesson-28
 ## Notes
 
 The example Unity project in this repository contains the final code that was modified in Lesson 28 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to allow the user to attach an email identity to their user profile that only contains an anonymous identity.
+
+Unity editor version: LTS 2021.3.4f1
