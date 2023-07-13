@@ -24,3 +24,4 @@ git checkout Lesson-9
 
 The example Unity project in this repository contains the final code that was modified in Lesson 09 of the brainCloud BootCamp learning series. In this lesson, the example Unity project is updated to support Universal authentication (userID + password).
 
+Unity editor version: LTS 2021.3.4f1
