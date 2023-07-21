@@ -4,7 +4,7 @@ This repository contains all the source code from the lessons in brainCloud Boot
 
 The brainCloud BootCamp learning series for Unity can be found on Youtube at the link below:
 
-https://www.youtube.com/playlist?list=PLDHkRGdDbBBJ03JeQfGnflPIKMOEgBCoZ
+https://www.youtube.com/watch?v=ayWnTd5KlZE&list=PLDHkRGdDbBBIj2vBhok_VJlrIJT-gz75I
 
 
 If you haven't signed up or you want to log into the brainCloud portal, you can do that here:
