@@ -153,12 +153,15 @@ public class Network : MonoBehaviour
         // Failure callback lambda
         BrainCloud.FailureCallback failureCallback = (statusMessage, code, error, cbObject) =>
         {
-            string errorMessage = "Reconnect failed. " + ExtractStatusMessage(error);
-
-            Debug.Log(errorMessage);
-
-            if (authenticationRequestFailed != null)
-                authenticationRequestFailed(errorMessage);
+            if (code == BrainCloud.ReasonCodes.GAME_VERSION_NOT_SUPPORTED)
+            {
+                HandleAppVersionError(error, authenticationRequestFailed);
+            }
+            else
+            {
+                string errorMessage = "Reconnect authentication failed. " + ExtractStatusMessage(error);
+                HandleAuthenticationError(errorMessage, authenticationRequestFailed);
+            }
         };
 
         // Make the BrainCloud request
@@ -177,12 +180,15 @@ public class Network : MonoBehaviour
         // Failure callback lambda
         BrainCloud.FailureCallback failureCallback = (statusMessage, code, error, cbObject) =>
         {
-            string errorMessage = "RequestAnonymousAuthentication failed. " + ExtractStatusMessage(error);
-
-            Debug.Log(errorMessage);
-
-            if (authenticationRequestFailed != null)
-                authenticationRequestFailed(errorMessage);
+            if (code == BrainCloud.ReasonCodes.GAME_VERSION_NOT_SUPPORTED)
+            {
+                HandleAppVersionError(error, authenticationRequestFailed);
+            }
+            else
+            {
+                string errorMessage = "Anonymous authentication failed. " + ExtractStatusMessage(error);
+                HandleAuthenticationError(errorMessage, authenticationRequestFailed);
+            }
         };
 
         // Make the BrainCloud request
@@ -201,12 +207,15 @@ public class Network : MonoBehaviour
         // Failure callback lambda
         BrainCloud.FailureCallback failureCallback = (statusMessage, code, error, cbObject) =>
         {
-            string errorMessage = "RequestAuthenticationEmail failed. " + ExtractStatusMessage(error);
-
-            Debug.Log(errorMessage);
-
-            if (authenticationRequestFailed != null)
-                authenticationRequestFailed(errorMessage);
+            if (code == BrainCloud.ReasonCodes.GAME_VERSION_NOT_SUPPORTED)
+            {
+                HandleAppVersionError(error, authenticationRequestFailed);
+            }
+            else
+            {
+                string errorMessage = "Email authentication failed. " + ExtractStatusMessage(error);
+                HandleAuthenticationError(errorMessage, authenticationRequestFailed);
+            }
         };
 
         // Make the BrainCloud request
@@ -225,12 +234,15 @@ public class Network : MonoBehaviour
         // Failure callback lambda
         BrainCloud.FailureCallback failureCallback = (statusMessage, code, error, cbObject) =>
         {
-            string errorMessage = "RequestAuthenticationUniversal failed. " + ExtractStatusMessage(error);
-
-            Debug.Log(errorMessage);
-
-            if (authenticationRequestFailed != null)
-                authenticationRequestFailed(errorMessage);
+            if (code == BrainCloud.ReasonCodes.GAME_VERSION_NOT_SUPPORTED)
+            {
+                HandleAppVersionError(error, authenticationRequestFailed);
+            }
+            else
+            {
+                string errorMessage = "Universal authentication failed. " + ExtractStatusMessage(error);
+                HandleAuthenticationError(errorMessage, authenticationRequestFailed);
+            }
         };
 
         // Make the BrainCloud request
@@ -915,6 +927,21 @@ public class Network : MonoBehaviour
             authenticationRequestCompleted();
     }
 
+    private void HandleAuthenticationError(string errorMessage, AuthenticationRequestFailed authenticationRequestFailed = null)
+    {
+        Debug.Log(errorMessage);
+
+        if (authenticationRequestFailed != null)
+            authenticationRequestFailed(errorMessage);
+    }
+
+    private void HandleAppVersionError(string error, AuthenticationRequestFailed authenticationRequestFailed = null)
+    {
+        JsonData jsonData = JsonMapper.ToObject(error);
+        string upgradeAppIdMessage = jsonData["upgradeAppId"].ToString();
+        HandleAuthenticationError(upgradeAppIdMessage, authenticationRequestFailed);
+    }
+
     private string ExtractStatusMessage(string error)
     {
         JsonData jsonData = JsonMapper.ToObject(error);
@@ -938,11 +965,15 @@ public class Network : MonoBehaviour
         // Failure callback lambda
         BrainCloud.FailureCallback failureCallback = (statusMessage, code, error, cbObject) =>
         {
-            string errorMessage = "AuthenticateExternal Twitch failed. " + ExtractStatusMessage(error);
-            Debug.Log(errorMessage);
-
-            if (m_AuthenticationRequestFailed != null)
-                m_AuthenticationRequestFailed(errorMessage);
+            if (code == BrainCloud.ReasonCodes.GAME_VERSION_NOT_SUPPORTED)
+            {
+                HandleAppVersionError(error, m_AuthenticationRequestFailed);
+            }
+            else
+            {
+                string errorMessage = "External authentication failed. " + ExtractStatusMessage(error);
+                HandleAuthenticationError(errorMessage, m_AuthenticationRequestFailed);
+            }
         };
 
         // Make the BrainCloud request
