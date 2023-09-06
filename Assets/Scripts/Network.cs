@@ -156,7 +156,7 @@ public class Network : MonoBehaviour
             }
             else
             {
-                string errorMessage = "Reconnect failed. " + ExtractStatusMessage(error);
+                string errorMessage = "Reconnect authentication failed. " + ExtractStatusMessage(error);
                 HandleAuthenticationError(errorMessage, authenticationRequestFailed);
             }
         };
@@ -183,7 +183,7 @@ public class Network : MonoBehaviour
             }
             else
             {
-                string errorMessage = "RequestAnonymousAuthentication failed. " + ExtractStatusMessage(error);
+                string errorMessage = "Anonymous authentication failed. " + ExtractStatusMessage(error);
                 HandleAuthenticationError(errorMessage, authenticationRequestFailed);
             }
         };
@@ -210,7 +210,7 @@ public class Network : MonoBehaviour
             }
             else
             {
-                string errorMessage = "RequestAuthenticationEmail failed. " + ExtractStatusMessage(error);
+                string errorMessage = "Email authentication failed. " + ExtractStatusMessage(error);
                 HandleAuthenticationError(errorMessage, authenticationRequestFailed);
             }
         };
@@ -237,7 +237,7 @@ public class Network : MonoBehaviour
             }
             else
             {
-                string errorMessage = "RequestAuthenticationUniversal failed. " + ExtractStatusMessage(error);
+                string errorMessage = "Universal authentication failed. " + ExtractStatusMessage(error);
                 HandleAuthenticationError(errorMessage, authenticationRequestFailed);
             }
         };
