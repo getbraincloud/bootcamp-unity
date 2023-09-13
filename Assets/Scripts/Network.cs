@@ -1194,9 +1194,6 @@ public class Network : MonoBehaviour
     private void OnTwitchAuthenticationDenied()
     {
         string errorMessage = "Unable to authenticate with brainCloud. User denied Twitch OAuth 2.0 access";
-        Debug.Log(errorMessage);
-
-        if (m_AuthenticationRequestFailed != null)
-            m_AuthenticationRequestFailed(errorMessage);
+        HandleAuthenticationError(errorMessage, m_AuthenticationRequestFailed);
     }
 }
