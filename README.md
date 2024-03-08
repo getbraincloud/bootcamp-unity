@@ -1,8 +1,8 @@
-# BootCamp-Unity (Lesson-3)
+# bootcamp-unity (Lesson-3)
 
-This repository contains the Unity project for Lesson 03 that is used for the brainCloud BootCamp learning series.
+This repository contains the Unity project for Lesson 03 that is used for the Unity BootCamp learning series.
 
-The brainCloud BootCamp learning series for Unity can be found on Youtube at the link below:
+The Unity BootCamp learning series can be found on Youtube at the link below:
 
 https://www.youtube.com/playlist?list=PLDHkRGdDbBBJ03JeQfGnflPIKMOEgBCoZ
 
@@ -15,13 +15,13 @@ https://portal.braincloudservers.com/
 ## Installation Guide
 
 ```bash
-git clone https://github.com/getbraincloud/BootCamp-Unity.git
-cd BootCamp-Unity
+git clone https://github.com/getbraincloud/bootcamp-unity.git
+cd bootcamp-unity
 git checkout Lesson-3
 ```
 
 ## Notes
 
-The example Unity project in this repository contains the final code that was modified in Lesson 03 of the brainCloud BootCamp learning series. In this lesson, the brainCloud client was added the example Unity project.
+The example Unity project in this repository contains the final code that was modified in Lesson 03 of the Unity BootCamp learning series. In this lesson, the brainCloud client was added the example Unity project.
 
 Unity editor version: LTS 2021.3.4f1
