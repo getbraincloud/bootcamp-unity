@@ -1,8 +1,8 @@
-# BootCamp-Unity
+# bootcamp-unity
 
-This repository contains the initial Unity project that is used for the brainCloud BootCamp learning series.
+This repository contains the initial Unity project that is used for the Unity BootCamp learning series.
 
-The brainCloud BootCamp learning series can be found on Youtube at the link below:
+The Unity BootCamp learning series can be found on Youtube at the link below:
 
 https://www.youtube.com/playlist?list=PLDHkRGdDbBBJ03JeQfGnflPIKMOEgBCoZ
 
@@ -22,6 +22,6 @@ git checkout Initial-Project
 
 ## Notes
 
-The example project in this repository intentionally does not contain the brainCloud client in the Unity project. This project is intended to be the starting code for lesson 03 in the brainCloud BootCamp learning series.
+The example project in this repository intentionally does not contain the brainCloud client in the Unity project. This project is intended to be the starting code for lesson 03 in the Unity BootCamp learning series.
 
 Unity editor version: LTS 2021.3.4f1
