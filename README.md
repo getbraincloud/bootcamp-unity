@@ -15,8 +15,8 @@ https://portal.braincloudservers.com/
 ## Installation Guide
 
 ```bash
-git clone https://github.com/getbraincloud/BootCamp-Unity.git
-cd BootCamp-Unity
+git clone https://github.com/getbraincloud/bootcamp-unity.git
+cd bootcamp-unity
 ```
 
 ## Notes
