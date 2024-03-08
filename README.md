@@ -21,10 +21,10 @@ cd bootcamp-unity
 
 ## Notes
 
-The brainCloud BootCamp series was designed with an already 'completed' example game, that simply needed to have brainCloud integrated into it.
+The Unity BootCamp series was designed with an already 'completed' example game, that simply needed to have brainCloud integrated into it.
 
-There are 35 lessons in the brainCloud BootCamp series, however some of the lessons don't have source code. In fact, only 24 of the 35 lessons have source code. Each lesson has a seperate branch in this repository. Each branch contains the example Unity project source code in its final state for the corresponding lesson. 
+There are 35 lessons in the Unity BootCamp, however some of the lessons don't have source code. In fact, only 24 of the 35 lessons have source code. Each lesson has a seperate branch in this repository. Each branch contains the example Unity project source code in its final state for the corresponding lesson. 
 
-There is also a branch for the initial Unity project, this branch contains the starter game code without the brainCloud Unity client. If you plan to follow along and code with the BootCamp series, its recommended that you clone this repository and checkout the Initial-Project branch.
+There is also a branch for the initial Unity project; this branch contains the starter game code without the brainCloud Unity client. If you plan to follow along and code with the BootCamp series, its recommended that you clone this repository and checkout the Initial-Project branch.
 
 Unity editor version: LTS 2021.3.4f1
