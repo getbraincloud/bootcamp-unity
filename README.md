@@ -2,9 +2,9 @@
 
 This repository contains the Unity project for Lesson 03 that is used for the Unity BootCamp learning series.
 
-The Unity BootCamp learning series can be found on Youtube at the link below:
+The Unity BootCamp learning series can be found at the link below:
 
-https://www.youtube.com/playlist?list=PLDHkRGdDbBBJ03JeQfGnflPIKMOEgBCoZ
+https://bootcamp.braincloudservers.com/?mto-course=braincloud-bootcamp-unity
 
 
 If you haven't signed up or you want to log into the brainCloud portal, you can do that here:
