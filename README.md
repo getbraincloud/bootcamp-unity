@@ -1,8 +1,8 @@
 # bootcamp-unity (Lesson-3)
 
-This repository contains the Unity project for Lesson 03 that is used for the Unity BootCamp learning series.
+This repository contains the Unity project for Lesson 03 that is used for the Unity BootCamp.
 
-The Unity BootCamp learning series can be found at the link below:
+The Unity BootCamp can be found at the link below:
 
 https://bootcamp.braincloudservers.com/?mto-course=braincloud-bootcamp-unity
 
