@@ -39,6 +39,12 @@ public class Network : MonoBehaviour
         m_BrainCloud.RunCallbacks();
     }
 
+    void OnApplicationQuit()
+    {
+        // The application is closin, send the logout request to end the brainCloud session
+        m_BrainCloud.Logout(false);
+    }
+
     public bool HasAuthenticatedPreviously()
     {
         return m_BrainCloud.GetStoredProfileId() != "" && m_BrainCloud.GetStoredAnonymousId() != "";
@@ -58,10 +64,6 @@ public class Network : MonoBehaviour
             {
                 Debug.Log("LogOut success: " + responseData);
 
-                // The user logged out, clear the persisted data related to their account
-                m_BrainCloud.ResetStoredAnonymousId();
-                m_BrainCloud.ResetStoredProfileId();
-
                 if (brainCloudLogOutCompleted != null)
                     brainCloudLogOutCompleted();
             };
@@ -76,7 +78,7 @@ public class Network : MonoBehaviour
             };
 
             // Make the BrainCloud request
-            m_BrainCloud.PlayerStateService.Logout(successCallback, failureCallback);
+            m_BrainCloud.Logout(true, successCallback, failureCallback);
         }
         else
         {
@@ -121,7 +123,7 @@ public class Network : MonoBehaviour
         // Failure callback lambda
         BrainCloud.FailureCallback failureCallback = (statusMessage, code, error, cbObject) =>
         {
-            Debug.Log("Anonymous authentication failed. " + statusMessage);
+            Debug.Log("Anonymous authentication failed. " + error);
 
             if (authenticationRequestFailed != null)
                 authenticationRequestFailed();
