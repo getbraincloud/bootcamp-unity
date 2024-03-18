@@ -15,7 +15,7 @@ namespace BrainCloud
     using System;
 #endif
 
-#if !(DOT_NET)
+#if !(DOT_NET || GODOT)
     using UnityEngine;
     using UnityEngine.Assertions;
     using System.Text;
@@ -175,6 +175,7 @@ using System.Globalization;
         private BrainCloudMail _mailService;
         private BrainCloudMessaging _messagingService;
         private BrainCloudBlockchain _blockchain;
+        private BrainCloudGroupFile _groupFileService;
         
         // RTT service
         private BrainCloudLobby _lobbyService;
@@ -262,6 +263,7 @@ using System.Globalization;
             _groupService = new BrainCloudGroup(this);
             _mailService = new BrainCloudMail(this);
             _messagingService = new BrainCloudMessaging(this);
+            _groupFileService = new BrainCloudGroupFile(this);
 
             // RTT 
             _lobbyService = new BrainCloudLobby(this);
@@ -584,6 +586,11 @@ using System.Globalization;
         public BrainCloudBlockchain Blockchain
         {
             get { return _blockchain; }
+        }
+
+        public BrainCloudGroupFile GroupFileService
+        {
+            get { return _groupFileService; }
         }
         #endregion
 
@@ -1292,9 +1299,9 @@ using System.Globalization;
 
         /// <summary>Method writes log if logging is enabled</summary>
         /// 
-        internal void Log(string log)
+        internal void Log(string log, bool bypassLogEnabled = false)
         {
-            if (_loggingEnabled)
+            if (_loggingEnabled || bypassLogEnabled)
             {
                 string formattedLog = DateTime.Now.ToString("HH:mm:ss.fff") + " #BCC " + (log.Length < 14000 ? log : log.Substring(0, 14000) + " << (LOG TRUNCATED)");
                 lock (_loggingMutex)
@@ -1305,7 +1312,9 @@ using System.Globalization;
                     }
                     else
                     {
-#if !(DOT_NET)
+#if GODOT
+                        Godot.GD.Print(formattedLog);
+#elif !DOT_NET
                         Debug.Log(formattedLog);
 #elif !XAMARIN
                         Console.WriteLine(formattedLog);
@@ -1348,7 +1357,9 @@ using System.Globalization;
 
             if (error != null)
             {
-#if !(DOT_NET)
+#if GODOT
+                Godot.GD.Print("ERROR | Failed to initialize brainCloud - " + error);
+#elif !DOT_NET
                 Debug.LogError("ERROR | Failed to initialize brainCloud - " + error);
 #elif !XAMARIN
                 Console.WriteLine("ERROR | Failed to initialize brainCloud - " + error);
@@ -1358,7 +1369,7 @@ using System.Globalization;
 
             // TODO: what is our default c# platform?
             Platform platform = Platform.Windows;
-#if !(DOT_NET)
+#if !(DOT_NET || GODOT)
             platform = Platform.FromUnityRuntime();
 #endif
 
@@ -1368,7 +1379,7 @@ using System.Globalization;
             //setup region/country code
             if (Util.GetCurrentCountryCode() == string.Empty)
             {
-#if (DOT_NET)
+#if (DOT_NET || GODOT)
                 Util.SetCurrentCountryCode(RegionInfo.CurrentRegion.TwoLetterISORegionName);
 #else
                 Util.SetCurrentCountryCode(RegionLocale.UsersCountryLocale);
