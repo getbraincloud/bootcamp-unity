@@ -68,7 +68,7 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_GameState == GameState.GameOver)
+        if (m_GameState == GameState.GameOver || m_GameState == GameState.Victory)
         {
             if (m_EndOfGameDisplayTime > 0.0f)
             {
@@ -82,10 +82,17 @@ public class Game : MonoBehaviour
 
                     if (m_Mode == Mode.Endless)
                     {
-                        if (Network.sharedInstance.IsUsernameSaved())
-                            Network.sharedInstance.PostScoreToLeaderboards(m_ElapsedTime, OnPostScoreRequestCompleted);
+                        if (Network.sharedInstance.IsAuthenticated())
+                        {
+                            if (Network.sharedInstance.IsUsernameSaved())
+                                Network.sharedInstance.PostScoreToLeaderboards(m_ElapsedTime, OnPostScoreRequestCompleted);
+                            else
+                                DialogManager.sharedInstance.ShowPostScoreDialog(m_ElapsedTime, OnPostScoreRequestCompleted);
+                        }
                         else
-                            DialogManager.sharedInstance.ShowPostScoreDialog(m_ElapsedTime, OnPostScoreRequestCompleted);
+                        {
+                            DialogManager.sharedInstance.ShowPlayAgainDialog();
+                        }
                     }
                     else if (m_Mode == Mode.Horde)
                     {
