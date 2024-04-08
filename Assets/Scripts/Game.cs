@@ -64,7 +64,7 @@ public class Game : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (m_GameState == GameState.GameOver)
+        if (m_GameState == GameState.GameOver || m_GameState == GameState.Victory)
         {
             if (m_EndOfGameDisplayTime > 0.0f)
             {
