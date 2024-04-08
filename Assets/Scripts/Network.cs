@@ -37,6 +37,11 @@ public class Network : MonoBehaviour
         m_BrainCloud.RunCallbacks();
     }
 
+    public string BrainCloudClientVersion
+    {
+        get { return m_BrainCloud.Client.BrainCloudClientVersion; }
+    }
+
     public bool HasAuthenticatedPreviously()
     {
         return m_BrainCloud.GetStoredProfileId() != "" && m_BrainCloud.GetStoredAnonymousId() != "";
