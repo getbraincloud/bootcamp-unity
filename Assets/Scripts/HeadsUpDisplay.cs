@@ -9,6 +9,8 @@ using UnityEngine.UI;
 
 public class HeadsUpDisplay : MonoBehaviour
 {
+    [SerializeField] private Text appVersion;
+    [SerializeField] private Text brainCloudVersion;
     [SerializeField] private Text timer;
     [SerializeField] private GameObject scrollingElementPrefab;
     [SerializeField] private GameObject mainInformation;
@@ -46,6 +48,16 @@ public class HeadsUpDisplay : MonoBehaviour
             mainInformation.GetComponent<Text>().color = color;
             secondaryInformation.GetComponent<Text>().color = color;
         }
+    }
+
+    public void SetAppVersion(string version)
+    {
+        appVersion.text = "App version: " + version;
+    }
+
+    public void SetBrainCloudVersion(string version)
+    {
+        brainCloudVersion.text = "BC Client version: " + version;
     }
 
     public void SetElapsedTime(float elapsedTime)
