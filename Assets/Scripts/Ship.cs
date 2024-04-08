@@ -103,6 +103,9 @@ public class Ship : BaseObject
     // Update is called once per frame
     void Update()
     {
+        if (Time.timeScale == 0.0f)
+            return;
+
         if (m_IsSpawning)
         {
             if (m_SpawnSlider.IsSliding())
