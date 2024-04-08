@@ -21,6 +21,11 @@ public class Network : MonoBehaviour
 
     }
 
+    public string BrainCloudClientVersion
+    {
+        get { return ""; }
+    }
+
     public bool IsAuthenticated()
     {
         return false;
