@@ -370,5 +370,8 @@ public class Ship : BaseObject
     private void OnSpawnCompleted(Slider slider)
     {
         m_IsSpawning = false;
+
+        m_LinearVelocity = Vector2.zero;
+        m_Acceleration = Vector2.zero;
     }
 }
