@@ -50,6 +50,9 @@ public class Game : MonoBehaviour
 
         m_UserData = new UserData();
 
+        hud.SetAppVersion(Application.version);
+        hud.SetBrainCloudVersion(Network.sharedInstance.BrainCloudClientVersion);
+
         ship.SetDelegate(OnShipHasExploded);
         ship.gameObject.SetActive(false);
 
