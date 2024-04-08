@@ -10504,7 +10504,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -335}
-  m_SizeDelta: {x: 920, y: 150}
+  m_SizeDelta: {x: 1200, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1218085463
 MonoBehaviour:
@@ -12916,7 +12916,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -430}
-  m_SizeDelta: {x: 500, y: 60}
+  m_SizeDelta: {x: 1200, y: 60}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1591798007
 MonoBehaviour:
@@ -29956,7 +29956,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachEmailButton: {fileID: 445364504}
   setUsernameButton: {fileID: 7899355653665505006}
-  highScoresButton: {fileID: 7899355654178794753}
+  highScoresButton: {fileID: 0}
   statisticsButton: {fileID: 7899355653464894498}
   achievementsButton: {fileID: 719774820}
   logOutButton: {fileID: 238618982}

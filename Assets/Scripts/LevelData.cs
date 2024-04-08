@@ -124,6 +124,24 @@ public class LevelData
                 m_EnemyTypes.Add(new EnemyType(type, health));
             }
         }
+
+        JsonData startingAsteroids = data["StartingAsteroids"];
+        if (startingAsteroids.IsArray)
+        {
+            for (int i = 0; i < startingAsteroids.Count; i++)
+            {
+                m_StartingAsteroids.Add(startingAsteroids[i].ToString());
+            }
+        }
+
+        JsonData startingEnemies = data["StartingEnemies"];
+        if (startingEnemies.IsArray)
+        {
+            for (int i = 0; i < startingEnemies.Count; i++)
+            {
+                m_StartingEnemies.Add(startingEnemies[i].ToString());
+            }
+        }
     }
 
     public int GetHealthForEnemyType(string enemyType)
