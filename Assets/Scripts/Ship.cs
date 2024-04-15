@@ -182,7 +182,7 @@ public class Ship : BaseObject
 
     public void OnMovementUpStart()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && GetHealth() > 0 && gameObject.activeSelf)
         {
             m_UpKeyPressed = true;
             m_Acceleration.y += Constants.kShipAcceleration;
@@ -192,7 +192,7 @@ public class Ship : BaseObject
 
     public void OnMovementDownStart()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && GetHealth() > 0 && gameObject.activeSelf)
         {
             m_DownKeyPressed = true;
             m_Acceleration.y -= Constants.kShipAcceleration;
@@ -202,7 +202,7 @@ public class Ship : BaseObject
 
     public void OnMovementLeftStart()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && GetHealth() > 0 && gameObject.activeSelf)
         {
             m_LeftKeyPressed = true;
             m_Acceleration.x -= Constants.kShipAcceleration;
@@ -212,7 +212,7 @@ public class Ship : BaseObject
 
     public void OnMovementRightStart()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && GetHealth() > 0 && gameObject.activeSelf)
         {
             m_RightKeyPressed = true;
             m_Acceleration.x += Constants.kShipAcceleration;
