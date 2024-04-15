@@ -19,7 +19,10 @@ public class Ship : BaseObject
     private ShipHasExploded m_ShipHasExploded;
     private Slider m_SpawnSlider;
     private bool m_IsSpawning = false;
-    private bool m_IsHolding = false;
+    private bool m_DownKeyPressed = false;
+    private bool m_UpKeyPressed = false;
+    private bool m_LeftKeyPressed = false;
+    private bool m_RightKeyPressed = false;
 
     // Start is called before the first frame update
     private void Awake()
@@ -136,9 +139,7 @@ public class Ship : BaseObject
 
         // Move the ship
         Vector2 position = new Vector2(transform.localPosition.x, transform.localPosition.y);
-
-        //if(!m_IsHolding)
-            position += m_LinearVelocity * Time.deltaTime;
+        position += m_LinearVelocity * Time.deltaTime;
 
         // Clamp the position on screen
         position.x = Mathf.Clamp(position.x, Constants.kShipMinX, m_ScreenBounds.x - Constants.kShipMaxOffsetX);
@@ -175,21 +176,11 @@ public class Ship : BaseObject
         }
     }
 
-    public void OnHold(InputAction.CallbackContext context)
-    {
-        m_IsHolding = context.ReadValue<float>() != 0.0f;
-
-        if (!m_IsHolding)
-        {
-            m_LinearVelocity = Vector2.zero;
-            m_Acceleration = Vector2.zero;
-        }
-    }
-
     public void OnMovementUpStart()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && GetHealth() > 0 && gameObject.activeSelf)
         {
+            m_UpKeyPressed = true;
             m_Acceleration.y += Constants.kShipAcceleration;
             m_LinearVelocity.y = m_Acceleration.y;
         }
@@ -197,8 +188,9 @@ public class Ship : BaseObject
 
     public void OnMovementDownStart()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && GetHealth() > 0 && gameObject.activeSelf)
         {
+            m_DownKeyPressed = true;
             m_Acceleration.y -= Constants.kShipAcceleration;
             m_LinearVelocity.y = m_Acceleration.y;
         }
@@ -206,8 +198,9 @@ public class Ship : BaseObject
 
     public void OnMovementLeftStart()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && GetHealth() > 0 && gameObject.activeSelf)
         {
+            m_LeftKeyPressed = true;
             m_Acceleration.x -= Constants.kShipAcceleration;
             m_LinearVelocity.x = m_Acceleration.x;
         }
@@ -215,8 +208,9 @@ public class Ship : BaseObject
 
     public void OnMovementRightStart()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && GetHealth() > 0 && gameObject.activeSelf)
         {
+            m_RightKeyPressed = true;
             m_Acceleration.x += Constants.kShipAcceleration;
             m_LinearVelocity.x = m_Acceleration.x;
         }
@@ -224,32 +218,36 @@ public class Ship : BaseObject
 
     public void OnMovementUpStop()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && m_UpKeyPressed)
         {
+            m_UpKeyPressed = false;
             m_Acceleration.y -= Constants.kShipAcceleration;
         }
     }
 
     public void OnMovementDownStop()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && m_DownKeyPressed)
         {
+            m_DownKeyPressed = false;
             m_Acceleration.y += Constants.kShipAcceleration;
         }
     }
 
     public void OnMovementLeftStop()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && m_LeftKeyPressed)
         {
+            m_LeftKeyPressed = false;
             m_Acceleration.x += Constants.kShipAcceleration;
         }
     }
 
     public void OnMovementRightStop()
     {
-        if (!m_IsSpawning)
+        if (!m_IsSpawning && m_RightKeyPressed)
         {
+            m_RightKeyPressed = false;
             m_Acceleration.x -= Constants.kShipAcceleration;
         }
     }
