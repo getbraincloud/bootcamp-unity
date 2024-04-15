@@ -19,7 +19,6 @@ public class InputManager : MonoBehaviour
         m_Input.Enable();
 
         m_Input.Ship.Fire.performed += context => ship.OnFire();
-        m_Input.Ship.Hold.performed += context => ship.OnHold(context);
 
         m_Input.Ship.MovementUp.started += context => ship.OnMovementUpStart();
         m_Input.Ship.MovementUp.canceled += context => ship.OnMovementUpStop();
@@ -46,7 +45,6 @@ public class InputManager : MonoBehaviour
         m_Input.Disable();
 
         m_Input.Ship.Fire.performed -= context => ship.OnFire();
-        m_Input.Ship.Hold.performed -= context => ship.OnHold(context);
 
         m_Input.Ship.MovementUp.started -= context => ship.OnMovementUpStart();
         m_Input.Ship.MovementUp.canceled -= context => ship.OnMovementUpStop();
