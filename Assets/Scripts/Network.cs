@@ -367,7 +367,7 @@ public class Network : MonoBehaviour
             };
 
             // Make the BrainCloud request
-            m_BrainCloud.PlayerStateService.UpdateName(username, successCallback, failureCallback);
+            m_BrainCloud.PlayerStateService.UpdateUserName(username, successCallback, failureCallback);
         }
         else
         {
